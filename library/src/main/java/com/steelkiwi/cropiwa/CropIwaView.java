@@ -270,4 +270,8 @@ public class CropIwaView extends FrameLayout {
     public interface ErrorListener {
         void onError(Throwable e);
     }
+
+    public CropIwaImageViewConfig getImageConfig() {
+        return imageConfig;
+    }
 }
