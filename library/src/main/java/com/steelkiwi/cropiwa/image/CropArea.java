@@ -34,7 +34,7 @@ public class CropArea {
         this.cropRect = cropRect;
     }
 
-    public Bitmap applyCropTo(Bitmap bitmap) {
+    public Bitmap applyCropTo(Bitmap bitmap) throws IllegalArgumentException{
         int x = findRealCoordinate(bitmap.getWidth(), cropRect.left, imageRect.width());
         int y = findRealCoordinate(bitmap.getHeight(), cropRect.top, imageRect.height());
         int width = findRealCoordinate(bitmap.getWidth(), cropRect.width(), imageRect.width());

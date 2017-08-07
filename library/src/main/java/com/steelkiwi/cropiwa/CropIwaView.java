@@ -177,6 +177,10 @@ public class CropIwaView extends FrameLayout {
     }
 
     public void crop(CropIwaSaveConfig saveConfig) {
+        if (imageView.getImageRect().left == -1 || imageView.getImageRect().left == 0) {
+            return;
+        }
+        
         CropArea cropArea = CropArea.create(
                 imageView.getImageRect(),
                 imageView.getImageRect(),
